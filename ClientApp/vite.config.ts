@@ -14,5 +14,13 @@ export default defineConfig({
   },
   server: {
     https: true,
+    proxy: {
+      "/WeatherForecast": {
+        target: "https:localhost:7137",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace("/^/WeatherForecast/", "/WeatherForecast"),
+      },
+    },
   },
 })
