@@ -1,0 +1,110 @@
+[
+  {
+    "_id": "50dc0d63-9167-440b-907a-9b94a5c80085",
+    "colId": "4789ba4a-6de9-4016-857b-97dc7883c82c",
+    "containerId": "",
+    "name": "root path test",
+    "url": "{{host}}",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-17T10:19:31.570Z",
+    "modified": "2023-04-17T10:19:31.570Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a810711f-fccf-468f-aedb-b05ad7d280fc",
+    "colId": "4789ba4a-6de9-4016-857b-97dc7883c82c",
+    "containerId": "",
+    "name": "todo items",
+    "url": "{{host}}/todoitems",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-17T10:19:31.571Z",
+    "modified": "2023-04-17T10:19:31.571Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e7c58af6-e42e-41bf-82b3-7224c49e34da",
+    "colId": "4789ba4a-6de9-4016-857b-97dc7883c82c",
+    "containerId": "",
+    "name": "get completed items",
+    "url": "{{host}}/todoitems/complete",
+    "method": "GET",
+    "sortNum": 25000,
+    "created": "2023-04-17T10:19:31.572Z",
+    "modified": "2023-04-17T10:19:31.572Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8219047b-ec4f-4f31-8949-82eaf6348a49",
+    "colId": "4789ba4a-6de9-4016-857b-97dc7883c82c",
+    "containerId": "",
+    "name": "add todo item",
+    "url": "{{host}}/todoitems",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-04-17T10:19:31.573Z",
+    "modified": "2023-04-17T10:19:31.573Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"test name\",\n  \"isComplete\":true\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f9e2228b-6f5e-4737-ac41-fe0b4a121aa2",
+    "colId": "4789ba4a-6de9-4016-857b-97dc7883c82c",
+    "containerId": "",
+    "name": "get item by id",
+    "url": "{{host}}/todoitems/{{todoId}}",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-04-17T10:19:31.574Z",
+    "modified": "2023-04-17T10:19:31.574Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "1ab48cfc-7244-4e67-9eb8-66571ec0f73b",
+    "colId": "4789ba4a-6de9-4016-857b-97dc7883c82c",
+    "containerId": "",
+    "name": "update todo",
+    "url": "{{host}}/todoitems/{{todoId}}",
+    "method": "PUT",
+    "sortNum": 50000,
+    "created": "2023-04-17T10:19:31.575Z",
+    "modified": "2023-04-17T10:19:31.575Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"updated ok\",\n  \"isComplete\":true\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "88ee6494-7c5f-4ce4-911b-9ff1b2c6415b",
+    "colId": "4789ba4a-6de9-4016-857b-97dc7883c82c",
+    "containerId": "",
+    "name": "delete todo",
+    "url": "{{host}}/todoitems/{{todoId}}",
+    "method": "DELETE",
+    "sortNum": 60000,
+    "created": "2023-04-17T10:19:31.576Z",
+    "modified": "2023-04-17T10:19:31.576Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
