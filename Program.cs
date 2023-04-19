@@ -1,3 +1,5 @@
+using Python.Runtime;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,5 +25,8 @@ app.MapControllerRoute(
     pattern: "{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");
+
+Runtime.PythonDLL = @"C:\Users\USER\AppData\Local\Programs\Python\Python310\python310.dll";
+        
 
 app.Run();

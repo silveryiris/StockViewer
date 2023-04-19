@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Python.Runtime;
 
 namespace StockViewer.Controllers;
 
@@ -21,6 +22,14 @@ public class WeatherForecastController : ControllerBase
     [HttpGet]
     public IEnumerable<WeatherForecast> Get()
     {
+
+        PythonEngine.Initialize();
+
+        using(Py.GIL()){
+            dynamic np = Py.Import("numpy");
+            Console.WriteLine(np.cos(np.pi * 2));
+        }
+        
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
