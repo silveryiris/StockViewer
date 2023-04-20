@@ -21,6 +21,12 @@ export default defineConfig({
         secure: false,
         rewrite: (path) => path.replace("/^/WeatherForecast/", "/WeatherForecast"),
       },
+      "/swagger": {
+        target: "https://localhost:7137",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace("/^/swagger/", "/swagger"),
+      },
     },
   },
 })
