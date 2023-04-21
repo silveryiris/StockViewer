@@ -4,6 +4,8 @@ import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import mkcert from "vite-plugin-mkcert"
 
+const API_SERVER_LOCATION = "https://localhost:7137"
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), mkcert()],
@@ -15,17 +17,17 @@ export default defineConfig({
   server: {
     https: true,
     proxy: {
-      "/WeatherForecast": {
-        target: "https://localhost:7137",
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace("/^/WeatherForecast/", "/WeatherForecast"),
-      },
       "/swagger": {
-        target: "https://localhost:7137",
+        target: `${API_SERVER_LOCATION}`,
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace("/^/swagger/", "/swagger"),
+      },
+      "/api": {
+        target: `${API_SERVER_LOCATION}`,
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace("/^/api/", "/api"),
       },
     },
   },
