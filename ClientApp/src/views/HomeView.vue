@@ -1,9 +1,9 @@
-<script setup lang="ts">
-import TheWelcome from "@/components/TheWelcome.vue"
-</script>
-
 <template>
   <main>
-    <TheWelcome />
+    <SiteNavi></SiteNavi>
   </main>
 </template>
+
+<script setup lang="ts">
+import SiteNavi from "@/components/main/SiteNavi.vue"
+</script>
